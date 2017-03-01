@@ -1,0 +1,8 @@
+.a {
+  width: 1000px;
+  height: 3px;
+  background: rgba(0, 0, 0, 0.8) -webkit-linear-gradient(left, #03b6a1 40%, #09a117) no-repeat;
+  background: rgba(0, 0, 0, 0.8) -o-linear-gradient(left, #03b6a1 40%, #09a117) no-repeat;
+  background: rgba(0, 0, 0, 0.8) linear-gradient(to right, #03b6a1 40%, #09a117) no-repeat;
+  background-size: 100% 0.03rem;
+}
