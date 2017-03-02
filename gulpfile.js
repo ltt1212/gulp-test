@@ -42,6 +42,7 @@ gulp.task('default',['less','concat','png'], function(){
 });
 gulp.task('webserver', function() {
     connect.server({
+    	root:'src/test.html',
         livereload: true,
         port: 2333
     });
