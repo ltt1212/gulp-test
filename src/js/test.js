@@ -65,6 +65,8 @@ var result = Number.Max_VALUE + Number.Min_VALUE;
 					
 				// }
 			};
+
+
 			var people = [people1,people2];
 			console.log(people);
 			console.log(people.toString());
@@ -83,6 +85,12 @@ var result = Number.Max_VALUE + Number.Min_VALUE;
 			}));
 			console.log(vaules.map(function(item,index,array){
 				return item*2;
+			}));
+			console.log(vaules.some(function(item,index,array){
+				return item>2;
+			}));
+			console.log(vaules.some(function(item,index,array){
+				return item>2;
 			}));
 			console.log(vaules.some(function(item,index,array){
 				return item>2;

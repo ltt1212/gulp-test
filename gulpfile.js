@@ -4,6 +4,7 @@ var less = require('gulp-less');
 var imagemin = require('gulp-imagemin');
 var uglify = require('gulp-uglify');
 var cssmin = require('gulp-minify-css');
+var connect = require('gulp-connect');
 
 
 
@@ -21,7 +22,7 @@ gulp.task('less',function(){
 	.pipe(gulp.dest('dist/css'));
 })
 gulp.task('concat',function(){
-	return gulp.src('src/js/*/*.js')
+	return gulp.src('src/js/*.js')
 	.pipe(concat('main.js'))
 	.pipe(uglify())
 	.pipe(gulp.dest('dist/js'));
@@ -37,5 +38,11 @@ gulp.task('png', function () {
 
 gulp.task('default',['less','concat','png'], function(){
 	console.log('ltt');
-	return gulp.watch(['src/js/*/*.js','src/less/main.less','src/images/*'],['less','concat','png']);
+	return gulp.watch(['src/js/*.js','src/less/main.less','src/images/*'],['less','concat','png']);
+});
+gulp.task('webserver', function() {
+    connect.server({
+        livereload: true,
+        port: 2333
+    });
 });
