@@ -42,8 +42,12 @@ gulp.task('default',['less','concat','png'], function(){
 });
 gulp.task('webserver', function() {
     connect.server({
-    	root:'src/test.html',
+    	root:'src',
         livereload: true,
-        port: 2333
+        // open: 'external',
+        host:'hello.com',
+        port: 8080,
+        debug:true,
+        index:"test.html"
     });
 });
